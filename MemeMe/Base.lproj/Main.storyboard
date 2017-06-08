@@ -25,13 +25,21 @@
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
                                     <barButtonItem systemItem="flexibleSpace" id="MIl-9X-Yl5"/>
-                                    <barButtonItem systemItem="camera" id="KjF-zL-qEd"/>
+                                    <barButtonItem systemItem="camera" id="KjF-zL-qEd">
+                                        <connections>
+                                            <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="FVy-hm-deD"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="lvX-TS-gVE"/>
-                                    <barButtonItem title="Album" id="Rkk-A9-iJY"/>
+                                    <barButtonItem title="Album" id="Rkk-A9-iJY">
+                                        <connections>
+                                            <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="Kjy-Jq-VuA"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem systemItem="flexibleSpace" id="lap-KI-hnN"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-N3-MaY">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-N3-MaY">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -48,6 +56,10 @@
                             <constraint firstAttribute="trailing" secondItem="Eah-U1-UcR" secondAttribute="trailing" id="yoT-Hx-N77"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="KjF-zL-qEd" id="TmE-c4-tX6"/>
+                        <outlet property="imageView" destination="vCA-N3-MaY" id="Gtv-vG-PE9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
