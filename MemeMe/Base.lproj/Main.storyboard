@@ -44,6 +44,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQh-T2-RbV">
+                                <rect key="frame" x="16" y="50" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PSV-Dr-o3Y"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Crw-xi-PsI">
                                 <rect key="frame" x="16" y="563" width="343" height="30"/>
                                 <constraints>
@@ -53,20 +62,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQh-T2-RbV">
-                                <rect key="frame" x="16" y="50" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PSV-Dr-o3Y"/>
-                                </constraints>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
-                            </textField>
+                            <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-g4-su4" userLabel="Navbar">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="action" id="Y9Q-W4-ENS"/>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Crw-xi-PsI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="50x-ZT-vtI"/>
-                            <constraint firstItem="LQh-T2-RbV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="Bca-bn-y92"/>
                             <constraint firstAttribute="trailing" secondItem="vCA-N3-MaY" secondAttribute="trailing" id="CrL-j6-2h9"/>
                             <constraint firstItem="Eah-U1-UcR" firstAttribute="top" secondItem="vCA-N3-MaY" secondAttribute="bottom" id="HDf-4j-Z5a"/>
                             <constraint firstItem="LQh-T2-RbV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LYs-dg-1cB"/>
@@ -76,8 +81,12 @@
                             <constraint firstItem="Crw-xi-PsI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rmo-U6-f3z"/>
                             <constraint firstItem="vCA-N3-MaY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uey-zF-YXp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eah-U1-UcR" secondAttribute="bottom" id="lLH-qd-UY1"/>
+                            <constraint firstItem="r3f-g4-su4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="lkR-Rw-tHV"/>
                             <constraint firstItem="Eah-U1-UcR" firstAttribute="top" secondItem="Crw-xi-PsI" secondAttribute="bottom" constant="30" id="o53-4O-dwl"/>
                             <constraint firstItem="LQh-T2-RbV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="olv-tQ-AAh"/>
+                            <constraint firstItem="LQh-T2-RbV" firstAttribute="top" secondItem="r3f-g4-su4" secondAttribute="bottom" constant="30" id="qsv-4t-gYb"/>
+                            <constraint firstItem="r3f-g4-su4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qxG-IT-yux"/>
+                            <constraint firstAttribute="trailing" secondItem="r3f-g4-su4" secondAttribute="trailing" id="vbS-Xn-lAg"/>
                             <constraint firstAttribute="trailing" secondItem="Eah-U1-UcR" secondAttribute="trailing" id="yoT-Hx-N77"/>
                         </constraints>
                     </view>
