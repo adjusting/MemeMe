@@ -83,6 +83,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 )
     }
     
+    @IBAction func cancel(_ sender: Any) {
+        imageView.image = nil
+        topTextField.text = "TOP"
+        bottomTextField.text = "BOTTOM"
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: false, completion: nil)
     }

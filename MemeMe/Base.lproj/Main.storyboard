@@ -70,6 +70,12 @@
                                             <action selector="shareMeme:" destination="BYZ-38-t0r" id="OaJ-F0-YPT"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="bD5-yh-Orj"/>
+                                    <barButtonItem systemItem="cancel" id="geC-tq-yYF">
+                                        <connections>
+                                            <action selector="cancel:" destination="BYZ-38-t0r" id="Mrl-lq-mcd"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
