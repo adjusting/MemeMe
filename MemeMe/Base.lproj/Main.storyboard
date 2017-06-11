@@ -22,6 +22,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-N3-MaY">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eah-U1-UcR">
                                 <rect key="frame" x="0.0" y="623" width="375" height="44"/>
                                 <items>
@@ -40,12 +44,8 @@
                                     <barButtonItem systemItem="flexibleSpace" id="lap-KI-hnN"/>
                                 </items>
                             </toolbar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vCA-N3-MaY">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQh-T2-RbV">
-                                <rect key="frame" x="16" y="50" width="343" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQh-T2-RbV">
+                                <rect key="frame" x="16" y="74" width="343" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="PSV-Dr-o3Y"/>
                                 </constraints>
@@ -65,7 +65,11 @@
                             <toolbar clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r3f-g4-su4" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <items>
-                                    <barButtonItem systemItem="action" id="Y9Q-W4-ENS"/>
+                                    <barButtonItem systemItem="action" id="Y9Q-W4-ENS">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="OaJ-F0-YPT"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -73,11 +77,11 @@
                         <constraints>
                             <constraint firstItem="Crw-xi-PsI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="50x-ZT-vtI"/>
                             <constraint firstAttribute="trailing" secondItem="vCA-N3-MaY" secondAttribute="trailing" id="CrL-j6-2h9"/>
-                            <constraint firstItem="Eah-U1-UcR" firstAttribute="top" secondItem="vCA-N3-MaY" secondAttribute="bottom" id="HDf-4j-Z5a"/>
+                            <constraint firstItem="Eah-U1-UcR" firstAttribute="top" secondItem="vCA-N3-MaY" secondAttribute="bottom" constant="-44" id="HDf-4j-Z5a"/>
                             <constraint firstItem="LQh-T2-RbV" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LYs-dg-1cB"/>
                             <constraint firstItem="Eah-U1-UcR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OVB-Px-qBM"/>
                             <constraint firstItem="vCA-N3-MaY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pxm-6H-1fF"/>
-                            <constraint firstItem="Eah-U1-UcR" firstAttribute="top" secondItem="vCA-N3-MaY" secondAttribute="bottom" id="RJz-Lh-cTy"/>
+                            <constraint firstItem="Eah-U1-UcR" firstAttribute="top" secondItem="vCA-N3-MaY" secondAttribute="bottom" constant="-44" id="RJz-Lh-cTy"/>
                             <constraint firstItem="Crw-xi-PsI" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Rmo-U6-f3z"/>
                             <constraint firstItem="vCA-N3-MaY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Uey-zF-YXp"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Eah-U1-UcR" secondAttribute="bottom" id="lLH-qd-UY1"/>
@@ -94,7 +98,9 @@
                         <outlet property="bottomTextField" destination="Crw-xi-PsI" id="ePQ-kS-LHG"/>
                         <outlet property="cameraButton" destination="KjF-zL-qEd" id="TmE-c4-tX6"/>
                         <outlet property="imageView" destination="vCA-N3-MaY" id="Gtv-vG-PE9"/>
+                        <outlet property="navbar" destination="r3f-g4-su4" id="QKW-Wj-Wxw"/>
                         <outlet property="shareButton" destination="Y9Q-W4-ENS" id="v7B-uY-ZiX"/>
+                        <outlet property="toolbar" destination="Eah-U1-UcR" id="2vX-SI-FQg"/>
                         <outlet property="topTextField" destination="LQh-T2-RbV" id="pa6-9w-gI2"/>
                     </connections>
                 </viewController>

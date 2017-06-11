@@ -14,6 +14,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var navbar: UIToolbar!
+    @IBOutlet weak var toolbar: UIToolbar!
+    
     let topDelegate = topTextFieldDelegate()
     let bottomDelegate = bottomTextFieldDelegate()
     let memeTextAttributes:[String:Any] = [
@@ -74,6 +77,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         present(imagePicker, animated: true, completion: nil)
     }
 
+    @IBAction func shareMeme(_ sender: Any) {
+        let controller = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
+        self.present(controller, animated: true, completion: nil)
+    }
+    
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: false, completion: nil)
     }
@@ -103,6 +111,23 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let userInfo = notification.userInfo
         let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboardSize.cgRectValue.height
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        navbar.isHidden = true
+        toolbar.isHidden = true
+        
+        // Render view to an image
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        navbar.isHidden = false
+        toolbar.isHidden = false
+
+        return memedImage
     }
 }
 
