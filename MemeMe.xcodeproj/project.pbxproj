@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		044D389E1EEBD3620096EA32 /* topTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D389D1EEBD3620096EA32 /* topTextFieldDelegate.swift */; };
 		044D38A01EEBD5250096EA32 /* bottomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D389F1EEBD5250096EA32 /* bottomTextFieldDelegate.swift */; };
+		044D38A21EED0B5E0096EA32 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38A11EED0B5E0096EA32 /* Meme.swift */; };
 		04D9F0491EE3B91D008DAB42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9F0481EE3B91D008DAB42 /* AppDelegate.swift */; };
 		04D9F04B1EE3B91D008DAB42 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D9F04A1EE3B91D008DAB42 /* ViewController.swift */; };
 		04D9F04E1EE3B91D008DAB42 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04D9F04C1EE3B91D008DAB42 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		044D389D1EEBD3620096EA32 /* topTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = topTextFieldDelegate.swift; sourceTree = "<group>"; };
 		044D389F1EEBD5250096EA32 /* bottomTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = bottomTextFieldDelegate.swift; sourceTree = "<group>"; };
+		044D38A11EED0B5E0096EA32 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 		04D9F0451EE3B91D008DAB42 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04D9F0481EE3B91D008DAB42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		04D9F04A1EE3B91D008DAB42 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				04D9F0481EE3B91D008DAB42 /* AppDelegate.swift */,
 				04D9F04A1EE3B91D008DAB42 /* ViewController.swift */,
+				044D38A11EED0B5E0096EA32 /* Meme.swift */,
 				04D9F04C1EE3B91D008DAB42 /* Main.storyboard */,
 				044D389D1EEBD3620096EA32 /* topTextFieldDelegate.swift */,
 				044D389F1EEBD5250096EA32 /* bottomTextFieldDelegate.swift */,
@@ -147,6 +150,7 @@
 				044D389E1EEBD3620096EA32 /* topTextFieldDelegate.swift in Sources */,
 				044D38A01EEBD5250096EA32 /* bottomTextFieldDelegate.swift in Sources */,
 				04D9F0491EE3B91D008DAB42 /* AppDelegate.swift in Sources */,
+				044D38A21EED0B5E0096EA32 /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

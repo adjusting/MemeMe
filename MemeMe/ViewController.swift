@@ -79,7 +79,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBAction func shareMeme(_ sender: Any) {
         let controller = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
-        self.present(controller, animated: true, completion: nil)
+        self.present(controller, animated: true, completion: {self.save()}
+)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
@@ -126,8 +127,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         navbar.isHidden = false
         toolbar.isHidden = false
-
+        
         return memedImage
+    }
+    
+    func save() {
+        // Create the meme
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
     }
 }
 
