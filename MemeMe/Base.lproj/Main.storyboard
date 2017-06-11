@@ -94,6 +94,7 @@
                         <outlet property="bottomTextField" destination="Crw-xi-PsI" id="ePQ-kS-LHG"/>
                         <outlet property="cameraButton" destination="KjF-zL-qEd" id="TmE-c4-tX6"/>
                         <outlet property="imageView" destination="vCA-N3-MaY" id="Gtv-vG-PE9"/>
+                        <outlet property="shareButton" destination="Y9Q-W4-ENS" id="v7B-uY-ZiX"/>
                         <outlet property="topTextField" destination="LQh-T2-RbV" id="pa6-9w-gI2"/>
                     </connections>
                 </viewController>

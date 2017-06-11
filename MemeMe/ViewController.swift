@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
     let topDelegate = topTextFieldDelegate()
@@ -31,6 +32,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         bottomTextField.text = "BOTTOM"
         bottomTextField.textAlignment = .center
         bottomTextField.delegate = bottomDelegate
+        shareButton.isEnabled = false
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -81,6 +83,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             imageView.image = image
         }
         picker.dismiss(animated: false, completion: nil)
+        shareButton.isEnabled = true
     }
 
     func keyboardWillShow(_ notification:Notification) {
