@@ -27,15 +27,17 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        topTextField.defaultTextAttributes = memeTextAttributes
-        topTextField.text = "TOP"
-        topTextField.textAlignment = .center
+        setupTextfield(topTextField, with: "TOP")
         topTextField.delegate = topDelegate
-        bottomTextField.defaultTextAttributes = memeTextAttributes
-        bottomTextField.text = "BOTTOM"
-        bottomTextField.textAlignment = .center
+        setupTextfield(bottomTextField, with: "BOTTOM")
         bottomTextField.delegate = bottomDelegate
         shareButton.isEnabled = false
+    }
+
+    func setupTextfield(_ textField: UITextField, with text:String) {
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.text = text
+        textField.textAlignment = .center
     }
     
     override func viewWillAppear(_ animated: Bool) {
