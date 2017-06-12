@@ -82,8 +82,7 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     @IBAction func shareMeme(_ sender: Any) {
         let controller = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
-        self.present(controller, animated: true, completion: {self.save()}
-)
+        present(controller, animated: true, completion: {self.save()})
     }
     
     @IBAction func cancel(_ sender: Any) {
@@ -129,8 +128,8 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         toolbar.isHidden = true
         
         // Render view to an image
-        UIGraphicsBeginImageContext(self.view.frame.size)
-        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
