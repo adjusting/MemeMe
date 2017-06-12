@@ -23,7 +23,7 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,
         NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
-        NSStrokeWidthAttributeName: 0]
+        NSStrokeWidthAttributeName: -5]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,7 +37,7 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         bottomTextField.delegate = bottomDelegate
         shareButton.isEnabled = false
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         subscribeToKeyboardNotifications()
