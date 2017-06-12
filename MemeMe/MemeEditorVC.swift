@@ -105,13 +105,13 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
 
     func keyboardWillShow(_ notification:Notification) {
         if bottomTextField.isEditing {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(_ notification:Notification) {
         if bottomTextField.isEditing {
-            view.frame.origin.y += getKeyboardHeight(notification)
+            view.frame.origin.y = 0
         }
     }
 
