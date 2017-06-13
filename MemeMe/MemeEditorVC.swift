@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemeEditorVC: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -91,18 +91,6 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         bottomTextField.text = "BOTTOM"
     }
     
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        picker.dismiss(animated: false, completion: nil)
-    }
-    
-    func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            imageView.image = image
-        }
-        picker.dismiss(animated: false, completion: nil)
-        shareButton.isEnabled = true
-    }
-
     func keyboardWillShow(_ notification:Notification) {
         if bottomTextField.isEditing {
             view.frame.origin.y = -getKeyboardHeight(notification)
@@ -145,5 +133,25 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         // Create the meme
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
     }
+}
+
+extension MemeEditorVC: UIImagePickerControllerDelegate {
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        picker.dismiss(animated: false, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageView.image = image
+        }
+        picker.dismiss(animated: false, completion: nil)
+        shareButton.isEnabled = true
+    }
+
+}
+
+ extension MemeEditorVC: UINavigationControllerDelegate {
+    
 }
 
