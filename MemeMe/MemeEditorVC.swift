@@ -89,6 +89,7 @@ class MemeEditorVC: UIViewController {
         imageView.image = nil
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
+        shareButton.isEnabled = false
     }
     
     func keyboardWillShow(_ notification:Notification) {
