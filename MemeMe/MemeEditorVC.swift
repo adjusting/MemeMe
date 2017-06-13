@@ -124,8 +124,7 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     
     func generateMemedImage() -> UIImage {
         
-        navbar.isHidden = true
-        toolbar.isHidden = true
+        hideToolbars(true)
         
         // Render view to an image
         UIGraphicsBeginImageContext(view.frame.size)
@@ -133,12 +132,15 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
         let memedImage:UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
         
-        navbar.isHidden = false
-        toolbar.isHidden = false
+        hideToolbars(false)
         
         return memedImage
     }
     
+    func hideToolbars(_ flag:Bool) {
+        navbar.isHidden = flag
+        toolbar.isHidden = flag
+    }
     func save() {
         // Create the meme
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
