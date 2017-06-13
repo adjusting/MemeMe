@@ -17,8 +17,8 @@ class MemeEditorVC: UIViewController, UIImagePickerControllerDelegate, UINavigat
     @IBOutlet weak var navbar: UIToolbar!
     @IBOutlet weak var toolbar: UIToolbar!
     
-    let topDelegate = topTextFieldDelegate()
-    let bottomDelegate = bottomTextFieldDelegate()
+    let topDelegate = TopTextFieldDelegate()
+    let bottomDelegate = BottomTextFieldDelegate()
     let memeTextAttributes:[String:Any] = [
         NSStrokeColorAttributeName: UIColor.black,
         NSForegroundColorAttributeName: UIColor.white,

@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class topTextFieldDelegate: NSObject, UITextFieldDelegate {
+class TopTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "TOP" {

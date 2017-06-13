@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class bottomTextFieldDelegate: NSObject, UITextFieldDelegate {
+class BottomTextFieldDelegate: NSObject, UITextFieldDelegate {
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField.text == "BOTTOM" {
