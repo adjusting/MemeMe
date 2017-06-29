@@ -130,9 +130,14 @@ class MemeEditorVC: UIViewController {
         navbar.isHidden = flag
         toolbar.isHidden = flag
     }
+    
     func save() {
         // Create the meme
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memedImage: generateMemedImage())
+        // Add it to the memes array in the Application Delegate
+        let object = UIApplication.shared.delegate
+        let appDelegate = object as! AppDelegate
+        appDelegate.memes.append(meme)
     }
 }
 
