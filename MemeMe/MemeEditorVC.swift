@@ -16,6 +16,7 @@ class MemeEditorVC: UIViewController {
     @IBOutlet weak var bottomTextField: UITextField!
     @IBOutlet weak var navbar: UIToolbar!
     @IBOutlet weak var toolbar: UIToolbar!
+
     
     let topDelegate = TopTextFieldDelegate()
     let bottomDelegate = BottomTextFieldDelegate()
@@ -83,13 +84,20 @@ class MemeEditorVC: UIViewController {
     @IBAction func shareMeme(_ sender: Any) {
         let controller = UIActivityViewController(activityItems: [generateMemedImage()], applicationActivities: nil)
         present(controller, animated: true, completion: {self.save()})
+        controller.completionWithItemsHandler = { (activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) -> Void in
+            if completed == true {
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
+    
     
     @IBAction func cancel(_ sender: Any) {
         imageView.image = nil
         topTextField.text = "TOP"
         bottomTextField.text = "BOTTOM"
         shareButton.isEnabled = false
+        dismiss(animated: true, completion: nil)
     }
     
     func keyboardWillShow(_ notification:Notification) {

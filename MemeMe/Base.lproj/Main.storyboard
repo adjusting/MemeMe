@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mqX-A2-BrY">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,6 +10,52 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="t87-hA-OI4">
+            <objects>
+                <navigationController id="mqX-A2-BrY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zOV-he-iiR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4mR-uL-iEs" kind="relationship" relationship="rootViewController" id="IIZ-Y7-slU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0SK-jH-znW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-889" y="-6"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="9jX-h2-I4Z">
+            <objects>
+                <tableViewController id="BqU-ZV-3tu" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="D9e-v7-CO1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="kRB-EI-c01">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kRB-EI-c01" id="0aL-jn-5sL">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BqU-ZV-3tu" id="ygm-1g-ByG"/>
+                            <outlet property="delegate" destination="BqU-ZV-3tu" id="DEp-j3-VFo"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="" image="table_30x30" id="1Mz-Wj-OSD"/>
+                    <navigationItem key="navigationItem" id="vRs-tn-pER"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfx-ZZ-yS7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="800.79999999999995" y="6.746626686656672"/>
+        </scene>
         <!--Meme EditorVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -112,7 +158,34 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1604" y="6.746626686656672"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="eT0-c1-P94">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="4mR-uL-iEs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="IlD-9G-Hnl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="0HT-68-rGO">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="presentation" id="BZe-Lq-6fq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="qVt-P2-7YE">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BqU-ZV-3tu" kind="relationship" relationship="viewControllers" id="327-d7-lat"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I2U-Qc-UvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-138.40000000000001" y="6.746626686656672"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="table_30x30" width="30" height="30"/>
+    </resources>
 </document>
