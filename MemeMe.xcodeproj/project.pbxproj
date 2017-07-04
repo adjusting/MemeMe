@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040DF1BB1F0B4F2400B1F2AA /* SentMemesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DF1BA1F0B4F2400B1F2AA /* SentMemesTableVC.swift */; };
 		044D389E1EEBD3620096EA32 /* TopTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D389D1EEBD3620096EA32 /* TopTextFieldDelegate.swift */; };
 		044D38A01EEBD5250096EA32 /* BottomTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D389F1EEBD5250096EA32 /* BottomTextFieldDelegate.swift */; };
 		044D38A21EED0B5E0096EA32 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044D38A11EED0B5E0096EA32 /* Meme.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040DF1BA1F0B4F2400B1F2AA /* SentMemesTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemesTableVC.swift; sourceTree = "<group>"; };
 		044D389D1EEBD3620096EA32 /* TopTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopTextFieldDelegate.swift; sourceTree = "<group>"; };
 		044D389F1EEBD5250096EA32 /* BottomTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomTextFieldDelegate.swift; sourceTree = "<group>"; };
 		044D38A11EED0B5E0096EA32 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
@@ -62,6 +64,7 @@
 			children = (
 				04D9F0481EE3B91D008DAB42 /* AppDelegate.swift */,
 				04D9F04A1EE3B91D008DAB42 /* MemeEditorVC.swift */,
+				040DF1BA1F0B4F2400B1F2AA /* SentMemesTableVC.swift */,
 				044D38A11EED0B5E0096EA32 /* Meme.swift */,
 				04D9F04C1EE3B91D008DAB42 /* Main.storyboard */,
 				044D389D1EEBD3620096EA32 /* TopTextFieldDelegate.swift */,
@@ -147,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D9F04B1EE3B91D008DAB42 /* MemeEditorVC.swift in Sources */,
+				040DF1BB1F0B4F2400B1F2AA /* SentMemesTableVC.swift in Sources */,
 				044D389E1EEBD3620096EA32 /* TopTextFieldDelegate.swift in Sources */,
 				044D38A01EEBD5250096EA32 /* BottomTextFieldDelegate.swift in Sources */,
 				04D9F0491EE3B91D008DAB42 /* AppDelegate.swift in Sources */,
