@@ -1,51 +1,54 @@
 //
-//  SentMemesTableVC.swift
+//  SentMemesCollectionVC.swift
 //  MemeMe
 //
-//  Created by Justin Gareau on 7/3/17.
+//  Created by Justin Gareau on 7/4/17.
 //  Copyright © 2017 Justin Gareau. All rights reserved.
 //
 
 import UIKit
 
-class SentMemesTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+private let reuseIdentifier = "MemeCell"
 
-    @IBOutlet var tableView: UITableView!
+class SentMemesCollectionVC: UICollectionViewController {
+
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes = [Meme]()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         memes = appDelegate.memes
-        tableView?.reloadData()
+        self.collectionView!.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    // MARK: UICollectionViewDataSource
+
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return memes.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MemeCell")!
-        let meme = memes[(indexPath as NSIndexPath).row]
 
-        cell.textLabel?.text = meme.topText + " " + meme.bottomText
-        cell.imageView?.image = meme.memedImage
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCollectionViewCell
+        let meme = memes[(indexPath as NSIndexPath).row]
+    
+        cell.memeImageView.image = meme.memedImage
+    
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath:IndexPath) {
         
         let detailController = self.storyboard!.instantiateViewController(withIdentifier: "SentMemesDetailViewController") as! SentMemesDetailViewController
         detailController.meme = memes[(indexPath as NSIndexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
     }
-}
 
+}
