@@ -15,20 +15,11 @@ class SentMemesCollectionVC: UICollectionViewController {
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes = [Meme]()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
     override func viewWillAppear(_ animated: Bool) {
         memes = appDelegate.memes
         self.collectionView!.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: UICollectionViewDataSource
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

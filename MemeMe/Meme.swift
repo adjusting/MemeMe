@@ -10,6 +10,8 @@ struct Meme {
     var bottomText: String
     var originalImage: UIImage
     var memedImage: UIImage
+    
+    
 }
 
 

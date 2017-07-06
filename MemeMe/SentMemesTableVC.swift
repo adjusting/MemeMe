@@ -14,19 +14,12 @@ class SentMemesTableVC: UIViewController, UITableViewDataSource, UITableViewDele
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var memes = [Meme]()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 
     override func viewWillAppear(_ animated: Bool) {
         memes = appDelegate.memes
         tableView?.reloadData()
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
